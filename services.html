@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wellora Hub services - mental health, physical health, and family support">
+<title>Our Services | Wellora Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<p>Wellora Hub</p>
+<div class="menu-toggle" aria-label="Menu">☰</div>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html" class="active">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="booking.html">Book</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="language-toggle">
+    <button id="langEn" class="lang-btn active" aria-label="English">EN</button>
+    <button id="langEs" class="lang-btn" aria-label="Spanish">ES</button>
+</div>
+</header>
+
+<section class="page-hero services-hero" aria-label="Services page header">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <h1 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h1>
+        <p data-en="Comprehensive support for every aspect of wellbeing" data-es="Apoyo integral para cada aspecto del bienestar">Comprehensive support for every aspect of wellbeing</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- ACCORDION SECTION - UI Option 2 -->
+    <div class="service-directory">
+        <h2 data-en="Service Directory" data-es="Directorio de Servicios">Service Directory</h2>
+        <p class="section-intro" data-en="Browse our services below. Click on any service to learn more." data-es="Explore nuestros servicios a continuación. Haga clic en cualquier servicio para obtener más información.">
+        Browse our services below. Click on any service to learn more.</p>
+        
+        <div class="accordion" id="mental-health">
+            <button class="accordion-btn" aria-expanded="false">
+                <span class="accordion-icon"></span>
+                <span data-en="Mental Health Support" data-es="Apoyo de Salud Mental">Mental Health Support</span>
+                <span class="accordion-arrow"></span>
+            </button>
+            <div class="accordion-content">
+                <div class="service-details">
+                    <h4 data-en="Professional support when you need it most" data-es="Apoyo profesional cuando más lo necesitas">Professional support when you need it most</h4>
+                    <p data-en="Our mental health services provide confidential, compassionate support for a range of needs. All our practitioners are fully qualified and registered." data-es="Nuestros servicios de salud mental brindan apoyo confidencial y compasivo para una variedad de necesidades. Todos nuestros profesionales están completamente calificados y registrados.">
+                    Our mental health services provide confidential, compassionate support for a range of needs. All our practitioners are fully qualified and registered.</p>
+                    <ul>
+                        <li><strong data-en="One-to-one counselling" data-es="Consejería individual">One-to-one counselling</strong> <span data-en="- 50-minute sessions with a trained counsellor" data-es="- Sesiones de 50 minutos con un consejero capacitado">- 50-minute sessions with a trained counsellor</span></li>
+                        <li><strong data-en="Listening circles" data-es="Círculos de escucha">Listening circles</strong> <span data-en="- Weekly peer support groups (free)" data-es="- Grupos de apoyo entre pares semanales (gratis)">- Weekly peer support groups (free)</span></li>
+                        <li><strong data-en="Crisis support" data-es="Apoyo en crisis">Crisis support</strong> <span data-en="- Immediate help for urgent mental health concerns" data-es="- Ayuda inmediata para problemas urgentes de salud mental">- Immediate help for urgent mental health concerns</span></li>
+                        <li><strong data-en="Workplace wellbeing" data-es="Bienestar laboral">Workplace wellbeing</strong> <span data-en="- Corporate programmes for employee mental health" data-es="- Programas corporativos para la salud mental de los empleados">- Corporate programmes for employee mental health</span></li>
+                    </ul>
+                    <button class="btn btn-small book-service" data-service="Mental Health Counselling">Book this service →</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion" id="physical-health">
+            <button class="accordion-btn" aria-expanded="false">
+                <span class="accordion-icon"></span>
+                <span data-en="Physical Health & Activity" data-es="Salud Física y Actividad">Physical Health & Activity</span>
+                <span class="accordion-arrow"></span>
+            </button>
+            <div class="accordion-content">
+                <div class="service-details">
+                    <h4 data-en="Stay active, stay healthy" data-es="Mantente activo, mantente saludable">Stay active, stay healthy</h4>
+                    <p data-en="Physical activity is essential for overall wellbeing. Our programmes are designed for all ages and abilities." data-es="La actividad física es esencial para el bienestar general. Nuestros programas están diseñados para todas las edades y habilidades.">
+                    Physical activity is essential for overall wellbeing. Our programmes are designed for all ages and abilities.</p>
+                    <ul>
+                        <li><strong data-en="Gentle yoga" data-es="Yoga suave">Gentle yoga</strong> <span data-en="- Slow-paced yoga for beginners and seniors" data-es="- Yoga de ritmo lento para principiantes y personas mayores">- Slow-paced yoga for beginners and seniors</span></li>
+                        <li><strong data-en="Community walking groups" data-es="Grupos de caminata comunitaria">Community walking groups</strong> <span data-en="- Social walks every Tuesday and Thursday" data-es="- Caminatas sociales cada martes y jueves">- Social walks every Tuesday and Thursday</span></li>
+                        <li><strong data-en="Chair-based exercises" data-es="Ejercicios en silla">Chair-based exercises</strong> <span data-en="- Seated exercises for limited mobility" data-es="- Ejercicios sentados para movilidad limitada">- Seated exercises for limited mobility</span></li>
+                        <li><strong data-en="Nutrition workshops" data-es="Talleres de nutrición">Nutrition workshops</strong> <span data-en="- Learn about healthy eating on a budget" data-es="- Aprende sobre alimentación saludable con presupuesto limitado">- Learn about healthy eating on a budget</span></li>
+                    </ul>
+                    <button class="btn btn-small book-service" data-service="Physical Health Consultation">Book this service →</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion" id="family-support">
+            <button class="accordion-btn" aria-expanded="false">
+                <span class="accordion-icon"></span>
+                <span data-en="Family & Parenting Support" data-es="Apoyo Familiar y para Padres">Family & Parenting Support</span>
+                <span class="accordion-arrow"></span>
+            </button>
+            <div class="accordion-content">
+                <div class="service-details">
+                    <h4 data-en="Supporting families to thrive" data-es="Apoyando a las familias para prosperar">Supporting families to thrive</h4>
+                    <p data-en="We offer practical support and advice for families at all stages." data-es="Ofrecemos apoyo práctico y consejos para familias en todas las etapas.">
+                    We offer practical support and advice for families at all stages.</p>
+                    <ul>
+                        <li><strong data-en="Parenting workshops" data-es="Talleres para padres">Parenting workshops</strong> <span data-en="- Evidence-based parenting strategies" data-es="- Estrategias de crianza basadas en evidencia">- Evidence-based parenting strategies</span></li>
+                        <li><strong data-en="Children's activities" data-es="Actividades infantiles">Children's activities</strong> <span data-en="- After-school clubs and holiday programmes" data-es="- Clubes después de la escuela y programas de vacaciones">- After-school clubs and holiday programmes</span></li>
+                        <li><strong data-en="Family mediation" data-es="Mediación familiar">Family mediation</strong> <span data-en="- Support for family conflict resolution" data-es="- Apoyo para la resolución de conflictos familiares">- Support for family conflict resolution</span></li>
+                        <li><strong data-en="Carer support groups" data-es="Grupos de apoyo para cuidadores">Carer support groups</strong> <span data-en="- For those caring for loved ones" data-es="- Para quienes cuidan a sus seres queridos">- For those caring for loved ones</span></li>
+                    </ul>
+                    <button class="btn btn-small book-service" data-service="Family Support Session">Book this service →</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion" id="elderly-support">
+            <button class="accordion-btn" aria-expanded="false">
+                <span class="accordion-icon"></span>
+                <span data-en="Elderly & Senior Services" data-es="Servicios para Personas Mayores">Elderly & Senior Services</span>
+                <span class="accordion-arrow"></span>
+            </button>
+            <div class="accordion-content">
+                <div class="service-details">
+                    <h4 data-en="Dignified support for older adults" data-es="Apoyo digno para adultos mayores">Dignified support for older adults</h4>
+                    <p data-en="Specialised services for seniors to maintain independence and quality of life." data-es="Servicios especializados para personas mayores para mantener la independencia y la calidad de vida.">
+                    Specialised services for seniors to maintain independence and quality of life.</p>
+                    <ul>
+                        <li><strong data-en="Home visits" data-es="Visitas a domicilio">Home visits</strong> <span data-en="- Wellbeing checks and social connection" data-es="- Controles de bienestar y conexión social">- Wellbeing checks and social connection</span></li>
+                        <li><strong data-en="Digital skills training" data-es="Capacitación en habilidades digitales">Digital skills training</strong> <span data-en="- Help using technology to stay connected" data-es="- Ayuda para usar tecnología y mantenerse conectado">- Help using technology to stay connected</span></li>
+                        <li><strong data-en="Befriending service" data-es="Servicio de amistad">Befriending service</strong> <span data-en="- Regular phone calls and visits" data-es="- Llamadas telefónicas y visitas regulares">- Regular phone calls and visits</span></li>
+                        <li><strong data-en="Benefits advice" data-es="Asesoramiento sobre beneficios">Benefits advice</strong> <span data-en="- Help accessing entitled support" data-es="- Ayuda para acceder al apoyo correspondiente">- Help accessing entitled support</span></li>
+                    </ul>
+                    <button class="btn btn-small book-service" data-service="Elderly Support Visit">Book this service →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- REFERRAL INFORMATION -->
+    <div class="referral-info">
+        <h3 data-en="How to access our services" data-es="Cómo acceder a nuestros servicios">How to access our services</h3>
+        <div class="referral-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text" data-en="Contact us by phone, email, or online form" data-es="Contáctenos por teléfono, correo electrónico o formulario en línea">Contact us by phone, email, or online form</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text" data-en="Initial assessment with a wellbeing advisor" data-es="Evaluación inicial con un asesor de bienestar">Initial assessment with a wellbeing advisor</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text" data-en="Referral to appropriate service or support" data-es="Derivación al servicio o apoyo apropiado">Referral to appropriate service or support</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-text" data-en="Ongoing support and review as needed" data-es="Apoyo continuo y revisión según sea necesario">Ongoing support and review as needed</div>
+            </div>
+        </div>
+        <p class="referral-note" data-en="Self-referrals and professional referrals are both accepted. You can refer yourself or ask someone to refer on your behalf with your consent." data-es="Se aceptan tanto derivaciones personales como profesionales. Puede derivarse usted mismo o pedirle a alguien que lo derive en su nombre con su consentimiento.">
+        Self-referrals and professional referrals are both accepted. You can refer yourself or ask someone to refer on your behalf with your consent.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Wellora Hub</h3>
+            <p>Supporting your wellbeing journey with accessible services for everyone in our community.</p>
+            <div class="footer-contact">
+                <p>Phone: <a href="tel:+4451234567">(+44)  5554443</a></p>
+                <p>Email: <a href="mailto:pawansunar@wellorahub.org">pawansunar@wellorahub.org</a></p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday - Friday: 9am - 5pm</li>
+                <li>Saturday: 10am - 2pm</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-link facebook"> Facebook</a>
+                <a href="#" class="social-link instagram"> Instagram</a>
+                <a href="#" class="social-link twitter"> Twitter</a>
+                <a href="#" class="social-link linkedin"> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Wellora Hub. All rights reserved. | <a href="#">Accessibility Statement</a></p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wellora Hub events - community workshops, yoga classes, walks and wellbeing activities">
+<title>Events | Wellora Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<p> Wellora Hub</p>
+<div class="menu-toggle" aria-label="Menu">☰</div>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html" class="active">Events</a></li>
+<li><a href="booking.html">Book</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="language-toggle">
+    <button id="langEn" class="lang-btn active" aria-label="English">EN</button>
+    <button id="langEs" class="lang-btn" aria-label="Spanish">ES</button>
+</div>
+</header>
+
+<section class="page-hero events-hero" aria-label="Events page header">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <h1 data-en="Upcoming Events" data-es="Próximos Eventos">Upcoming Events</h1>
+        <p data-en="Connect, learn, and grow with our community" data-es="Conecta, aprende y crece con nuestra comunidad">Connect, learn, and grow with our community</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- CALENDAR SECTION -->
+    <div class="calendar-view">
+        <div class="calendar-header">
+            <button id="prevMonth" aria-label="Previous month">←</button>
+            <h3 id="currentMonth">April 2026</h3>
+            <button id="nextMonth" aria-label="Next month">→</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+    </div>
+    
+    <!-- EVENT LISTINGS SECTION -->
+    <div class="events-list">
+        <h2 data-en="Event Listings" data-es="Lista de Eventos">Event Listings</h2>
+        <p class="section-intro" data-en="Browse our upcoming events and book your place" data-es="Explore nuestros próximos eventos y reserve su lugar">Browse our upcoming events and book your place</p>
+        
+        <!-- FILTER BUTTONS -->
+        <div class="event-filters">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="wellbeing">Wellbeing</button>
+            <button class="filter-btn" data-filter="activity">Physical Activity</button>
+            <button class="filter-btn" data-filter="social">Social</button>
+        </div>
+        
+        <!-- EVENTS GRID - UI Option 3 (List Layout) -->
+        <div class="events-grid" id="eventsGrid">
+            <div class="event-item" data-category="wellbeing">
+                <div>
+                    <strong>Morning Yoga Class</strong><br>
+                    <small>April 20, 2026 at 10:00 AM</small><br>
+                    <small>Main Hall |Free for members</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Morning Yoga Class - April 20">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="activity">
+                <div>
+                    <strong>Community Nature Walk</strong><br>
+                    <small>April 22, 2026 at 2:00 PM</small><br>
+                    <small>Meet at Hub entrance | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Community Nature Walk - April 22">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="wellbeing">
+                <div>
+                    <strong>Wellbeing Workshop</strong><br>
+                    <small>April 25, 2026 at 6:00 PM</small><br>
+                    <small>Online via Zoom | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Wellbeing Workshop - April 25">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="social">
+                <div>
+                    <strong>Coffee & Connect</strong><br>
+                    <small>May 2, 2026 at 11:00 AM</small><br>
+                    <small>Community Cafe | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Coffee & Connect - May 2">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="wellbeing">
+                <div>
+                    <strong>Parenting Workshop</strong><br>
+                    <small>May 5, 2026 at 1:00 PM</small><br>
+                    <small>Hub Meeting Room | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Parenting Workshop - May 5">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="activity">
+                <div>
+                    <strong>Gentle Exercise Class</strong><br>
+                    <small>May 7, 2026 at 11:00 AM</small><br>
+                    <small>Main Hall | Free - Suitable for seniors</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Gentle Exercise Class - May 7">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="wellbeing">
+                <div>
+                    <strong>Art Therapy Session</strong><br>
+                    <small>May 10, 2026 at 2:00 PM</small><br>
+                    <small>Creative Space | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Art Therapy Session - May 10">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="social">
+                <div>
+                    <strong>Community Book Club</strong><br>
+                    <small>May 12, 2026 at 6:30 PM</small><br>
+                    <small>Hub Library | Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Community Book Club - May 12">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="wellbeing">
+                <div>
+                    <strong>Mindfulness Session</strong><br>
+                    <small>May 15, 2026 at 10:00 AM</small><br>
+                    <small> Online via Zoom |  Free</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Mindfulness Session - May 15">Book →</button>
+            </div>
+
+            <div class="event-item" data-category="activity">
+                <div>
+                    <strong>Social Dance Class</strong><br>
+                    <small>May 18, 2026 at 7:00 PM</small><br>
+                    <small> Main Hall |  Free - No experience needed</small>
+                </div>
+                <button class="btn btn-small book-event" data-event="Social Dance Class - May 18">Book →</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Wellora Hub</h3>
+            <p>Supporting your wellbeing journey with accessible services for everyone in our community.</p>
+            <div class="footer-contact">
+                <p>Phone: <a href="tel:+4451234567">(+44)  5554443</a></p>
+                <p>Email: <a href="mailto:pawnasunar@wellorahub.org">pawansunar@wellorahub.org</a></p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday - Friday: 9am - 5pm</li>
+                <li>Saturday: 10am - 2pm</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-link facebook">Facebook</a>
+                <a href="#" class="social-link instagram"> Instagram</a>
+                <a href="#" class="social-link twitter"> Twitter</a>
+                <a href="#" class="social-link linkedin">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Wellora Hub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility Statement</a></p>
+        <p class="accessibility-note">This website meets WCAG 2.1 AA accessibility standards</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

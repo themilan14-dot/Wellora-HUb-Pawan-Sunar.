@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Book events and services at Wellora Hub">
+<title>Book an Event | Wellora Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<p>Wellora Hub</p>
+<div class="menu-toggle" aria-label="Menu">☰</div>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="booking.html" class="active">Book</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="language-toggle">
+    <button id="langEn" class="lang-btn active" aria-label="English">EN</button>
+    <button id="langEs" class="lang-btn" aria-label="Spanish">ES</button>
+</div>
+</header>
+
+<section class="page-hero booking-hero" aria-label="Booking page header">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <h1 data-en="Book an Event or Service" data-es="Reserva un Evento o Servicio">Book an Event or Service</h1>
+        <p data-en="Simple, quick, and confidential booking" data-es="Reserva simple, rápida y confidencial">Simple, quick, and confidential booking</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- WIZARD-STYLE MULTI-STEP FORM -->
+    <div class="wizard-container">
+        <div class="wizard-steps">
+            <div class="wizard-step active" data-step="1">
+                <div class="step-circle">1</div>
+                <span data-en="Select Service" data-es="Seleccionar Servicio">Select Service</span>
+            </div>
+            <div class="wizard-step" data-step="2">
+                <div class="step-circle">2</div>
+                <span data-en="Your Details" data-es="Tus Datos">Your Details</span>
+            </div>
+            <div class="wizard-step" data-step="3">
+                <div class="step-circle">3</div>
+                <span data-en="Confirm" data-es="Confirmar">Confirm</span>
+            </div>
+        </div>
+        
+        <form id="multiStepForm">
+            <!-- STEP 1 -->
+            <div class="form-step active" id="step1">
+                <h3 data-en="What would you like to book?" data-es="¿Qué te gustaría reservar?">What would you like to book?</h3>
+                <div class="booking-options">
+                    <div class="booking-option">
+                        <input type="radio" name="bookingType" id="eventBooking" value="event" checked>
+                        <label for="eventBooking"> Event or Workshop</label>
+                    </div>
+                    <div class="booking-option">
+                        <input type="radio" name="bookingType" id="serviceBooking" value="service">
+                        <label for="serviceBooking"> Health Service</label>
+                    </div>
+                </div>
+                
+                <div id="eventSelect" class="selection-group">
+                    <label for="eventSelect" data-en="Select Event" data-es="Seleccionar Evento">Select Event *</label>
+                    <select id="eventSelect">
+                        <option value="">Choose an event</option>
+                        <option>Morning Yoga Class - April 20 (10:00 AM)</option>
+                        <option>Community Nature Walk - April 22 (2:00 PM)</option>
+                        <option>Wellbeing Workshop - April 25 (6:00 PM)</option>
+                        <option>Coffee & Connect - May 2 (11:00 AM)</option>
+                        <option>Parenting Workshop - May 5 (1:00 PM)</option>
+                        <option>Gentle Exercise Class - May 7 (11:00 AM)</option>
+                        <option>Art Therapy Session - May 10 (2:00 PM)</option>
+                        <option>Community Book Club - May 12 (6:30 PM)</option>
+                        <option>Mindfulness Session - May 15 (10:00 AM)</option>
+                        <option>Social Dance Class - May 18 (7:00 PM)</option>
+                    </select>
+                </div>
+                
+                <div id="serviceSelect" class="selection-group" style="display:none;">
+                    <label for="serviceSelect" data-en="Select Service" data-es="Seleccionar Servicio">Select Service *</label>
+                    <select id="serviceSelect">
+                        <option value="">Choose a service</option>
+                        <option>Mental Health Counselling (50 min session)</option>
+                        <option>Physical Health Consultation</option>
+                        <option>Family Support Session</option>
+                        <option>Elderly Support Visit</option>
+                        <option>Digital Skills Training</option>
+                    </select>
+                </div>
+                
+                <div class="form-nav">
+                    <button type="button" class="btn-next">Continue →</button>
+                </div>
+            </div>
+            
+            <!-- STEP 2 -->
+            <div class="form-step" id="step2">
+                <h3 data-en="Your Details" data-es="Tus Datos">Your Details</h3>
+                <div class="form-group">
+                    <label for="fullName" data-en="Full Name" data-es="Nombre Completo">Full Name *</label>
+                    <input type="text" id="fullName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="emailAddress" data-en="Email Address" data-es="Correo Electrónico">Email Address *</label>
+                    <input type="email" id="emailAddress" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber" data-en="Phone Number" data-es="Número de Teléfono">Phone Number *</label>
+                    <input type="tel" id="phoneNumber" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferences" data-en="Accessibility or Dietary Requirements" data-es="Requisitos de Accesibilidad o Dieta">Accessibility or Dietary Requirements</label>
+                    <textarea id="preferences" placeholder="Please let us know of any needs we should be aware of..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent" required>
+                        <span data-en="I consent to Wellora Hub processing my data for this booking" data-es="Doy mi consentimiento para que Wellora Hub procese mis datos para esta reserva">I consent to Wellora Hub processing my data for this booking *</span>
+                    </label>
+                    <span class="error-message" id="consentError"></span>
+                </div>
+                
+                <div class="form-nav">
+                    <button type="button" class="btn-prev">← Back</button>
+                    <button type="button" class="btn-next">Continue →</button>
+                </div>
+            </div>
+            
+            <!-- STEP 3 -->
+            <div class="form-step" id="step3">
+                <h3 data-en="Confirm Your Booking" data-es="Confirma tu Reserva">Confirm Your Booking</h3>
+                <div class="booking-summary" id="bookingSummary"></div>
+                <div class="form-nav">
+                    <button type="button" class="btn-prev">← Back</button>
+                    <button type="submit" class="btn-submit">Confirm Booking →</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- HELP SECTION -->
+    <div class="booking-help">
+        <h4 data-en="Need help booking?" data-es="¿Necesitas ayuda para reservar?">Need help booking?</h4>
+        <p>Call our support team: <strong>(555) 123-4567</strong></p>
+        <p>Email: <strong>bookings@wellorahub.org</strong></p>
+        <p data-en="We're available Monday-Friday, 9am-5pm" data-es="Estamos disponibles de lunes a viernes, 9am-5pm">We're available Monday-Friday, 9am-5pm</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Wellora Hub</h3>
+            <p>Supporting your wellbeing journey with accessible services for everyone in our community.</p>
+            <div class="footer-contact">
+                <p>Phone: <a href="tel:+4451234567">(+44)  5554443</a></p>
+                <p>Email: <a href="mailto:pawansunar@wellorahub.org">pawansunar@wellorahub.org</a></p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday - Friday: 9am - 5pm</li>
+                <li>Saturday: 10am - 2pm</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-link facebook"> Facebook</a>
+                <a href="#" class="social-link instagram"> Instagram</a>
+                <a href="#" class="social-link twitter"> Twitter</a>
+                <a href="#" class="social-link linkedin"> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Wellora Hub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility Statement</a></p>
+        <p class="accessibility-note">This website meets WCAG 2.1 AA accessibility standards</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
